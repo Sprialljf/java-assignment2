@@ -46,10 +46,10 @@
 ---------------------------------------------------------------------------
 ---
 ### `File Structure/ `
-! [Image text]()
+! [Image Structure]()
 ---
 ### `UML/`
-! [Image text](https://github.com/Sprialljf/java-assignment2/blob/main/UML.png)
+[Image UML](https://github.com/Sprialljf/java-assignment2/blob/main/UML.png)
 
 ## Notes
 ---------------------------------------------------------------------------
