@@ -45,10 +45,10 @@
 ## File Structure and UML
 ---------------------------------------------------------------------------
 ---
-### `File Structure/ `
-! [Image Structure]()
+### `File Structure `
+! [File Structure](File Structure.png)
 ---
-### `UML/`
+### `UML`
 [Image UML](UML.png)
 
 ## Notes
