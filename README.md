@@ -1,22 +1,53 @@
-# CS611-Assignment 1
-## Sliding Puzzle Game (N-Puzzle)
+# CS611-Assignment 2
+## Dots & Boxes Game (N-Puzzle)
 
 ---------------------------------------------------------------------------
 - **Name**: [Jingfeng Li]
+            [Ziyang Wang]
 - **Email**: [ljf628@bu.edu]
 - **Student ID**: [U73840242]
 
 ## Files
 ---------------------------------------------------------------------------
-- `Board.java`:  
-  This section is used for creating a board that can be customized in size. And the board can be shuffled to a solvable state. Meanwhile, during the game, there will be vertifying valid movement. 
+### `app/`
+- **`Main.java`** — Unified launcher that allows the user to choose between **Dots & Boxes** and **Sliding Puzzle**.  
+  Handles initialization, player setup (human vs human or human vs AI), and the main control flow.
 
-- `Player.java`:  
-  This section creates a player including the name, recording step number.
+---
 
-- `Game.java`:  
-  It mainly includes game start, running loop and resetting game. By the way, it also gets input and output of words of game, and includes get game timing, calculating the last score.  
+### `core/`
 
+####  Game Base & Player Logic
+- **`GameEngine.java`** — Common interface defining the `playLoop()` method for all games.  
+- **`GameBoard.java`** — Abstract base for grid-based boards; provides dimensions and rendering helpers.  
+- **`Player.java`** — Defines player attributes including name, id, and type (human or AI).  
+- **`Bot.java`** — Abstract AI player class; uses strategy pattern for varying difficulty levels.  
+
+####  `core/strategy/`
+- **`EdgeChoiceStrategy.java`** — Strategy interface for edge selection logic used by AI bots.  
+- **`EasyStrategy.java`** — Random move selection; represents the **EasyBot** behavior.  
+- **`HardStrategy.java`** — Heuristic-based decision-making; prioritizes completing boxes and avoiding risky edges.  
+
+#### `core/ui/`
+- **`TextUtil.java`** — Utility class for terminal text formatting:
+  - ANSI color output (red, blue, green, yellow)
+  - Centered and padded strings
+  - Helper methods for removing ANSI codes
+
+---
+
+### `dots/`
+- **`DotsGame.java`** — Implements the full game logic for **Dots & Boxes**, managing turns, edge claiming, and score tracking.  
+- **`DotsBoard.java`** — Represents the dot grid and tracks claimed edges and completed boxes.  
+- **`Edge.java`** — Represents an edge (horizontal or vertical) connecting two dots; records ownership and position.
+
+---
+
+### `sliding/`
+- **`SlidingGame.java`** — Game loop for **Sliding Puzzle**; handles user moves and win condition checking.  
+- **`SlidingBoard.java`** — Implements the NxN tile board, supporting shuffling, movement, and completion checks.
+
+---
 ## Notes
 ---------------------------------------------------------------------------
 - The board size is customized by users, but I give a pecific range (users can adjust the size from 2*2 to 6*6)of it to avoid some exaggerating situation.
