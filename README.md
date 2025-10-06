@@ -49,7 +49,7 @@
 ! [Image Structure]()
 ---
 ### `UML/`
-[Image UML](https://github.com/Sprialljf/java-assignment2/blob/main/UML.png)
+[Image UML](UML.png)
 
 ## Notes
 ---------------------------------------------------------------------------
