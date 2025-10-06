@@ -42,12 +42,14 @@
 - **`SlidingBoard.java`** — Implementing the NxN tile board, supporting shuffling, movement, and completion checks.
 
 ---
-## `File Structure and UML/`
+## File Structure and UML
 ---------------------------------------------------------------------------
 ---
-### `File Structure `
+### `File Structure/ `
 ! [Image text]()
 ---
+### `UML/`
+! [Image text](https://github.com/Sprialljf/java-assignment2/blob/main/UML.png)
 
 ## Notes
 ---------------------------------------------------------------------------
