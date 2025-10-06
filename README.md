@@ -2,10 +2,10 @@
 ## Dots & Boxes Game (N-Puzzle)
 
 ---------------------------------------------------------------------------
-- **Name**: [Jingfeng Li]
+- **Name**: [Jingfeng Li]&
             [Ziyang Wang]
-- **Email**: [ljf628@bu.edu]
-- **Student ID**: [U73840242]
+- **Email**: [ljf628@bu.edu]&[zywang1@bu.edu]
+- **Student ID**: [U73840242]&[U12285471]
 
 ## Files
 ---------------------------------------------------------------------------
@@ -37,12 +37,18 @@
 - **`Edge.java`** — Representing an edge connecting two dots and recording ownership and position.
 
 ---
-
 ### `sliding/`
 - **`SlidingGame.java`** — Game loop for **Sliding Puzzle**.
 - **`SlidingBoard.java`** — Implementing the NxN tile board, supporting shuffling, movement, and completion checks.
 
 ---
+## `File Structure and UML/`
+---------------------------------------------------------------------------
+---
+### `File Structure `
+! [Image text]()
+---
+
 ## Notes
 ---------------------------------------------------------------------------
 - This project demonstrates modular object-oriented design using **inheritance**, **composition**, and the **strategy pattern**.  
@@ -56,55 +62,130 @@
 ---------------------------------------------------------------------------
 1. Openning the terminal
 2. Running the following instructions:
-   cd /C:/Users/14661/Desktop/bu/oodjava/hw2 (Enter the directory the code is stored);
-   javac Game.java Board.java Player.java (Compiling java files);
-   java Game (Executing java programme).
+   cd ......(the path of files) (Enter the directory the code is stored);
+   javac -d out @((Get-ChildItem -Recurse -Filter *.java .\src\main\java).FullName) (Compiling all java files);
+   java -cp out zyjfassignment.boardgames.app.Main(Executing java programme).
 ## Input/Output Example
 ---------------------------------------------------------------------------
 
 ```text
-Input your name:
-Sprial
-Welcome player: Sprial
+java -cp out zyjfassignment.boardgames.app.Main 
+Choose a game: 1) Dots & Boxes  2) Sliding Puzzle
+1
+Rows and columns (e.g., 7 7, default 7 7): 3 3
+Mode: 1) Human vs Human  2) Human vs AI (Easy)  3) Human vs AI (Hard)
+2
 
-Please input rows (2-6):
-3
-Please input cols (2-6):
-3
+ ?  0   ?  1   ?
+6      7      8
+ ?  2   ?  3   ?
+9      10     11
+ ?  4   ?  5   ?
+Score  Player1: 0   AI: 0
+Player1 choose an edge id (q to quit): 1
 
-2 8 6
-1 4 3
-5 7 _
+ ?  0   ?───── ?
+6      7      8
+ ?  2   ?  3   ?
+9      10     11
+ ?  4   ?  5   ?
+Score  Player1: 0   AI: 0
+AI choose an edge id (q to quit): 2
 
-Please,input number you want to move:
-4
-Invalid move, please try again.
+ ?  0   ?───── ?
+6      7      8
+ ?───── ?  3   ?
+9      10     11
+ ?  4   ?  5   ?
+Score  Player1: 0   AI: 0
+Player1 choose an edge id (q to quit): 2
+Illegal or already-claimed edge.
 
-Please,input number you want to move:
-7
+ ?  0   ?───── ?
+6      7      8
+ ?───── ?  3   ?
+9      10     11
+ ?  4   ?  5   ?
+Score  Player1: 0   AI: 0
+Player1 choose an edge id (q to quit): 0
 
-2 8 6
-1 4 3
-5 _ 7
+ ?───── ?───── ?
+6      7      8
+ ?───── ?  3   ?
+9      10     11
+ ?  4   ?  5   ?
+Score  Player1: 0   AI: 0
+AI choose an edge id (q to quit): 7
 
-...（Omission process）
+ ?───── ?───── ?
+6       ║      8
+ ?───── ?  3   ?
+9      10     11
+ ?  4   ?  5   ?
+Score  Player1: 0   AI: 0
+Player1 choose an edge id (q to quit): 3
 
-Please,input number you want to move:
-6
+ ?───── ?───── ?
+6       ║      8
+ ?───── ?───── ?
+9      10     11
+ ?  4   ?  5   ?
+Score  Player1: 0   AI: 0
+AI choose an edge id (q to quit): 8
 
-1 2 3
-4 5 6
-7 8 _
+ ?───── ?───── ?
+6       ║   ●   ║
+ ?───── ?───── ?
+9      10     11
+ ?  4   ?  5   ?
+Score  Player1: 0   AI: 1
+AI choose an edge id (q to quit): 6
 
-You have completed, now the board is:
-1 2 3
-4 5 6
-7 8 _
+ ?───── ?───── ?
+ ║   ●   ║   ●   ║
+ ?───── ?───── ?
+9      10     11
+ ?  4   ?  5   ?
+Score  Player1: 0   AI: 2
+AI choose an edge id (q to quit): 4
 
-Congratulations! Sprial, you solved the puzzle in 46 steps, taking 627 seconds.
-Your score is: 14.0
+ ?───── ?───── ?
+ ║   ●   ║   ●   ║
+ ?───── ?───── ?
+9      10     11
+ ?───── ?  5   ?
+Score  Player1: 0   AI: 2
+Player1 choose an edge id (q to quit): 5
 
-Want to play again? Please enter (y/n):
-y
+ ?───── ?───── ?
+ ║   ●   ║   ●   ║
+ ?───── ?───── ?
+9      10     11
+ ?───── ?───── ?
+Score  Player1: 0   AI: 2
+AI choose an edge id (q to quit): 10
 
-Input your name:
+ ?───── ?───── ?
+ ║   ●   ║   ●   ║
+ ?───── ?───── ?
+9       ║      11
+ ?───── ?───── ?
+Score  Player1: 0   AI: 2
+Player1 choose an edge id (q to quit): 9
+
+ ?───── ?───── ?
+ ║   ●   ║   ●   ║
+ ?───── ?───── ?
+ ┃   ●   ║      11
+ ?───── ?───── ?
+Score  Player1: 1   AI: 2
+Player1 choose an edge id (q to quit): 11
+
+ ?───── ?───── ?
+ ║   ●   ║   ●   ║
+ ?───── ?───── ?
+ ┃   ●   ║   ●   ┃
+ ?───── ?───── ?
+Score  Player1: 2   AI: 2
+Game over.
+Draw!
