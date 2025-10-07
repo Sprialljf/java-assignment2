@@ -46,11 +46,11 @@
 ---------------------------------------------------------------------------
 ---
 ### `File Structure `
-![File Structure](./images/File_Structure.png)
+![File Structure](/File_Structure.png)
 
 ---
 ### `UML`
-![UML Diagram](./images/UML.png)
+![UML Diagram](UML.png)
 
 ## Notes
 ---------------------------------------------------------------------------
