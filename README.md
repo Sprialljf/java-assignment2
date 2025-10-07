@@ -46,7 +46,7 @@
 ---------------------------------------------------------------------------
 ---
 ### `File Structure `
-![Structure](File Structure.png)
+![Structure](File_Structure.png)
 
 ---
 ### `UML`
