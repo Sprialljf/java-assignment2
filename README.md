@@ -192,3 +192,31 @@ Player1 choose an edge id (q to quit): 11
 Score  Player1: 2   AI: 2
 Game over.
 Draw!
+PS C:\Users\14661\Desktop\bu\oodjava\hw2\boardgames> java -cp out zyjfassignment.boardgames.app.Main 
+Choose a game: 1) Dots & Boxes  2) Sliding Puzzle
+2
+Rows m (default 4): 2
+Cols n (>=2) (default 4): 2
+Shuffle steps (default 200):   
+
+Sliding Puzzle 2x2 — use WASD to move the blank, q to quit.
+
+2 3 
+1
+Move (w/a/s/d, q to quit): w
+
+2
+1 3
+Move (w/a/s/d, q to quit): a
+
+  2
+1 3
+Move (w/a/s/d, q to quit): s
+
+1 2
+  3
+Move (w/a/s/d, q to quit): d
+
+1 2
+3
+Solved! ?
