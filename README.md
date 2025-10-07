@@ -65,9 +65,9 @@
 ---------------------------------------------------------------------------
 1. Openning the terminal
 2. Running the following instructions:
-   cd ......(the path of files) (Enter the directory the code is stored);
-   javac -d out @((Get-ChildItem -Recurse -Filter *.java .\src\main\java).FullName) (Compiling all java files);
-   java -cp out zyjfassignment.boardgames.app.Main(Executing java programme).
+   - cd ......(the path of files) (Enter the directory the code is stored);
+   - javac -d out @((Get-ChildItem -Recurse -Filter *.java .\src\main\java).FullName) (Compiling all java files);
+   - java -cp out zyjfassignment.boardgames.app.Main(Executing java programme).
 ## Input/Output Example
 ---------------------------------------------------------------------------
 
